@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'org.weather'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'junit:junit:4.13.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+    // https://mvnrepository.com/artifact/javax.json/javax.json-api
+    //implementation group: 'javax.json', name: 'javax.json-api', version: '1.0-b01'
+
+    // https://mvnrepository.com/artifact/javax.json/javax.json-api
+    implementation 'javax.json:javax.json-api:1.1.4'
+
+    // https://mvnrepository.com/artifact/javax.json.bind/javax.json.bind-api
+    // implementation 'javax.json.bind:javax.json.bind-api:1.0'
+
+    // https://mvnrepository.com/artifact/org.glassfish/javax.json
+    implementation 'org.glassfish:javax.json:1.1.4'
+
+}
+
+test {
+    useJUnitPlatform()
+}
